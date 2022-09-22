@@ -59,6 +59,12 @@ h3 {
   width: 100%;
 }
 
+.score-final{
+  color: whitesmoke;
+  font-size: 3.6rem;
+  padding-bottom: 2rem;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
