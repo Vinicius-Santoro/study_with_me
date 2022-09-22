@@ -1,4 +1,3 @@
-const select = document.getElementById('economia');
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
@@ -8,47 +7,48 @@ let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
+var currentLocation = window.location.pathname;
 let availableQuestions = [];
 
 let questions_content_1 = [
   {
-    question: "Economia 1.1",
-    choice1: "1",
-    choice2: "2",
-    choice3: "3",
-    choice4: "4",
-    choice5: "5",
-    answer: 1
+      question: "Economia 1.1",
+      choice1: "1",
+      choice2: "2",
+      choice3: "3",
+      choice4: "4",
+      choice5: "5",
+      answer: 1
   },
   {
-    question: "Economia 1.2",
-    choice1: "1",
-    choice2: "2",
-    choice3: "3",
-    choice4: "4",
-    choice5: "5",
-    answer: 1
+      question: "Economia 1.2",
+      choice1: "1",
+      choice2: "2",
+      choice3: "3",
+      choice4: "4",
+      choice5: "5",
+      answer: 1
   }
 ];
 
 let questions_content_2 = [
   {
-    question: "Economia 2.1",
-    choice1: "1",
-    choice2: "2",
-    choice3: "3",
-    choice4: "4",
-    choice5: "5",
-    answer: 1
+      question: "Economia 2.1",
+      choice1: "1",
+      choice2: "2",
+      choice3: "3",
+      choice4: "4",
+      choice5: "5",
+      answer: 1
   },
   {
-    question: "Economia 2.2",
-    choice1: "1",
-    choice2: "2",
-    choice3: "3",
-    choice4: "4",
-    choice5: "5",
-    answer: 1
+      question: "Economia 2.2",
+      choice1: "1",
+      choice2: "2",
+      choice3: "3",
+      choice4: "4",
+      choice5: "5",
+      answer: 1
   }
 ];
 
@@ -56,19 +56,13 @@ let questions_content_2 = [
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 2;
 
-setContentQuestion = () => {
-  if (select == "../content/economia_1.html"){
-    availableQuestions = [...questions_content_1];
-  }
-  else{
-    availableQuestions = [...questions_content_2];
-  }
-};
-
 startGame = () => {
   questionCounter = 0;
   score = 0;
-  availableQuestions = select.addEventListener('change', setContentQuestion);
+  if(currentLocation == "/study_with_me/project/subjects/economia/content/economia_1.html")
+    availableQuestions = [...questions_content_1];
+  else
+    availableQuestions = [...questions_content_2];
   getNewQuestion();
 };
 
@@ -76,7 +70,7 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
-    return window.location.assign("../../../end.html");
+    return window.location.assign("../../end.html");
   }
   questionCounter++;
   progressText.innerText = `Questão ${questionCounter}/${MAX_QUESTIONS}`;
@@ -85,8 +79,7 @@ getNewQuestion = () => {
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
-  availableQuestions = select.addEventListener('change', setContentQuestion);
-  availableQuestions.innerText = currentQuestion.availableQuestions;
+  question.innerText = currentQuestion.question;
 
   choices.forEach(choice => {
     const number = choice.dataset["number"];
