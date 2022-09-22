@@ -138,34 +138,28 @@ input::placeholder {
   color: #aaa;
 }
 
-/*background images*/
-
-body {
-  background: url('./images/space_image_2.jpg') no-repeat; 
-  /* background-size: cover; */
-}
-@media (min-width: 1600px)
-{
-    body {
-      background: url('./images/space_image_3.jpg') no-repeat center center fixed; 
-      background-size: cover;
-  }
-}
-@media (min-width: 1920px)
-{
-    body {
-      background: url('./images/space_image_4.jpg') no-repeat center center fixed; 
-      background-size: cover;
-  }
-}
-
 /*
 For PC
 */
 
 /*	=============================	Initial Screen - PC	=============================	*/
+@media (min-width: 1920px)
+{
+    body {
+		background: url('./images/pc-images/space_image_5.jpg') no-repeat center center fixed; 
+		background-size: cover;
+  }
+}
 
-/*	=============================	Economia - PC	=============================	*/
+/*	=============================	Initial Screen - Cell	=============================	*/
+@media (max-width: 1000px)
+{
+    body {
+      background: url('./images/pc-images/space_image_5.jpg') no-repeat center center fixed; 
+      background-size: cover;
+  }
+}
+
 
 /*	=============================	Economia 1 - PC	=============================	*/
 
