@@ -171,6 +171,13 @@ let questions_content_2 = [
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
+let MAX_QUESTIONS = 0;
+
+//function to determinate the max questions
+if(currentLocation == "/study_with_me/project/subjects/economia/content/economia_1.html")
+  MAX_QUESTIONS = 15;
+else  
+  MAX_QUESTIONS = 2;
 
 startGame = () => {
   questionCounter = 0;
@@ -184,15 +191,15 @@ startGame = () => {
 
 getNewQuestion = () => {
 
-  if (availableQuestions.length === 0 || questionCounter >= availableQuestions.length) {
+  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
     return window.location.assign("../../end.html");
   }
   questionCounter++;
-  progressText.innerText = `Questão ${questionCounter}/${availableQuestions.length}`;
+  progressText.innerText = `Questão ${questionCounter}/${MAX_QUESTIONS}`;
   //Update the progress bar
-  progressBarFull.style.width = `${(questionCounter / availableQuestions.length) * 100}%`;
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
