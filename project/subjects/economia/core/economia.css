@@ -90,6 +90,8 @@ teste
 :root {
   background-color: #0c365c;
   font-size: 40.5%;
+  background: url('../../../images/pc-images/space_image_3.jpg') no-repeat center center fixed; 
+  background-size: cover;
 }
 
 * {
@@ -225,26 +227,4 @@ input {
 
 input::placeholder {
   color: #aaa;
-}
-
-/*
-For PC
-*/
-
-/*	=============================	Initial Screen - PC	=============================	*/
-@media (min-width: 1001px)
-{
-    body {
-		background: url('../../../images/pc-images/space_image_3.jpg') no-repeat center center fixed; 
-		background-size: cover;
-  }
-}
-
-/*	=============================	Initial Screen - Cell	=============================	*/
-@media (max-width: 1000px)
-{
-    body {
-      background: url('../../../images/pc-images/space_image_3.jpg') no-repeat center center fixed; 
-      background-size: cover;
-  }
 }

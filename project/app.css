@@ -1,5 +1,7 @@
 :root {
   background-color: #0c365c;
+  background: url('./images/pc-images/space_image_5.jpg') no-repeat center center fixed; 
+  background-size: cover;
   font-size: 40.5%;
 }
 
@@ -137,58 +139,3 @@ input {
 input::placeholder {
   color: #aaa;
 }
-
-/*
-For PC
-*/
-
-/*	=============================	Initial Screen - PC	=============================	*/
-@media (min-width: 1920px)
-{
-    body {
-		background: url('./images/pc-images/space_image_5.jpg') no-repeat center center fixed; 
-		background-size: cover;
-  }
-}
-
-/*	=============================	Initial Screen - Cell	=============================	*/
-@media (max-width: 1000px)
-{
-    body {
-      background: url('./images/pc-images/space_image_5.jpg') no-repeat center center fixed; 
-      background-size: cover;
-  }
-}
-
-
-/*	=============================	Economia 1 - PC	=============================	*/
-
-/*	=============================	Economia 2 - PC	=============================	*/
-
-/*	=============================	Matematica - PC	=============================	*/
-
-/*	=============================	Matematica 1 - PC	=============================	*/
-
-/*	=============================	Matematica 2 - PC	=============================	*/
-
-/*	=============================	Economia End - PC	=============================	*/
-
-/*
-For Cellphone
-*/
-
-/*	=============================	Initial Screen - Cell	=============================	*/
-
-/*	=============================	Economia - Cell	=============================	*/
-
-/*	=============================	Economia 1 - Cell	=============================	*/
-
-/*	=============================	Economia 2 - Cell	=============================	*/
-
-/*	=============================	Matematica - Cell	=============================	*/
-
-/*	=============================	Matematica 1 - Cell	=============================	*/
-
-/*	=============================	Matematica 2 - Cell	=============================	*/
-
-/*	=============================	Economia End - Cell	=============================	*/
