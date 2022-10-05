@@ -144,7 +144,7 @@ let questions_content_1 = [
     choice3: "– 0,48",
     choice4: "– 0,25",
     choice5: "0,25",
-    answer: 1
+    answer: 5
   }
 ];
 
